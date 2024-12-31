@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include("../partials/cabecalho.ejs") %>
+</head>
+<body>
+    <form action="/reservas" method="post">
+
+        <input type="hidden" name="_id" value="<%=reserva._id%>">
+        
+        <div>
+            <label class="form-label">Matricula</label>
+            <input value ="<%= reserva.matricula%>" type= "text" class="form-control" name= "matricula" required>
+        </div>
+
+        <div>
+            <label class="form-label">Matricula do bibliotecário</label>
+            <input value ="<%= reserva.matriculaB%>" type= "text" class="form-control" name= "matriculaB" required>
+        </div> 
+
+        <div>
+            <label class="form-label">Nome do Livro</label>
+            <input value ="<%= reserva.nomeLivro%>" type= "text" class="form-control" name= "nomeLivro" required>
+        </div>
+
+        <div>
+            <label class="form-label">Data</label>
+            <input value ="<%= reserva.data%>" type= "text" class="form-control" name= "data" required>
+        </div>
+
+        <div>
+            <input type="submit" value="Salvar" class="btn btn-sucess">
+        </div>
+
+        
+        </form>
+
+        <%- include("../partials/rodape.ejs") %>
+</body>
+</html>

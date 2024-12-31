@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+
+    <%- include("../partials/cabecalho.ejs") %>
+    
+</head>
+<body>
+    <div>
+        <b>Matricula: </b> <%=reserva.matricula%>
+    </div>
+
+    <div>
+        <b>Matricula do bibliotecário: </b> <%=reserva.matriculaB%>
+    </div>
+
+    <div>
+        <b>Nome do livro: </b> <%=reserva.nomeLivro%>
+    </div>
+
+    <div>
+        <b>Data: </b> <%=reserva.data%>
+    </div>
+
+    <div>
+        <a href="/reservas">Voltar para a Listagem</a>
+    </div>
+
+    <%- include("../partials/rodape.ejs") %>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include("../partials/cabecalho.ejs") %>
+</head>
+<body>
+    <form action="/bibliotecarios" method="post">
+
+        <input type="hidden" name="_id" value="<%=bibliotecario._id%>">
+        
+        <div>
+            <label class="form-label">Matricula</label>
+            <input value ="<%= bibliotecario.matricula%>" type= "text" class="form-control" name= "matricula" required>
+        </div>
+
+        <div>
+            <label class="form-label">Nome</label>
+            <input value ="<%= bibliotecario.nome%>" type= "text" class="form-control" name= "nome" required>
+        </div> 
+
+        <div>
+            <label class="form-label">Cargo</label>
+            <input value ="<%= bibliotecario.cargo%>" type= "text" class="form-control" name= "cargo" required>
+        </div>
+
+        <div>
+            <label class="form-label">Turno</label>
+            <input value ="<%= bibliotecario.turno%>" type= "text" class="form-control" name= "turno" required>
+        </div>
+
+        <div>
+            <label class="form-label">Salário</label>
+            <input value ="<%= bibliotecario.salario%>" type= "text" class="form-control" name= "salario" required>
+        </div>
+        
+        <div>
+            <input type="submit" value="Salvar" class="btn btn-sucess">
+        </div>
+
+        
+        </form>
+
+        <%- include("../partials/rodape.ejs") %>
+</body>
+</html>
+

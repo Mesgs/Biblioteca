@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+
+    <%- include("../partials/cabecalho.ejs") %>
+    
+</head>
+<body>
+    <div>
+        <b>Matricula: </b> <%=bibliotecario.matricula%>
+    </div>
+
+    <div>
+        <b>Nome: </b> <%=bibliotecario.nome%>
+    </div>
+
+    <div>
+        <b>Cargo: </b> <%=bibliotecario.cargo%>
+    </div>
+    
+    <div>
+        <b>Turno: </b> <%=bibliotecario.turno%>
+    </div>
+
+    <div>
+        <b>Salário: </b> <%=bibliotecario.salario%>
+    </div>
+
+
+    <div>
+        <a href="/bibliotecarios">Voltar para a Listagem</a>
+    </div>
+
+    <%- include("../partials/rodape.ejs") %>
+    
+</body>
+</html>
